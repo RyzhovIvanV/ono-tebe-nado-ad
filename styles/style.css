@@ -3,6 +3,7 @@ body {
     font-family: 'Raleway', Arial, sans-serif;
     max-width: 1440px;
     margin: 0 auto;
+    min-width: 1100px;
 }
 
 /* Шапка */
@@ -17,10 +18,17 @@ body {
     display: flex;
     gap: 32px;
     list-style: circle;
+    margin: 0;
+    padding: 0;
 }
 
 .header__links-list-item_no-bullit {
     list-style: none;
+}
+
+.header__link {
+    font-size: 18px;
+    text-underline-offset: 4px;
 }
 
 .header__link_active {
@@ -30,6 +38,7 @@ body {
 .header__logo {
     display: block;
     width: 148px;
+    text-decoration: none;
 }
 
 .header__logo-image {
@@ -41,6 +50,11 @@ body {
     max-width: 240px;
     font-style: normal;
     line-height: 1.35;
+    font-size: 18px;
+}
+
+.header__address a {
+    text-underline-offset: 4px;
 }
 
 /* Обложка */
@@ -65,6 +79,8 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1.15;
+    letter-spacing: 0.3em;
+    margin: 0;
 }
 
 .aligned-text {
@@ -74,10 +90,13 @@ body {
 .aligned-text_center {
     text-align: center;
     margin: 20px 0;
+    letter-spacing: 0.3em;
+    padding-left: 30px;
 }
 
 .aligned-text_right {
     text-align: right;
+    letter-spacing: 0.3em;
 }
 
 .cover__description {
@@ -122,12 +141,15 @@ body {
     display: flex;
     gap: 25px;
     list-style: none;
-    margin-bottom: 30px;
+    margin: 0 0 30px 0;
+    padding: 0;
+    flex-wrap: wrap;
 }
 
 .lots__card-list-item {
     flex: 1;
     min-height: 450px;
+    min-width: 350px;
 }
 
 .card-link {
@@ -144,18 +166,20 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-size: cover;
+    background-position: center;
 }
 
 .card_type_film {
-    background: url('../images/card-lot-01.jpg') center/cover no-repeat;
+    background-image: url('../images/card-lot-01.jpg');
 }
 
 .card_type_book {
-    background: url('../images/card-lot-02.jpg') center/cover no-repeat;
+    background-image: url('../images/card-lot-02.jpg');
 }
 
 .card_type_picture {
-    background: url('../images/card-lot-03.jpg') center/cover no-repeat;
+    background-image: url('../images/card-lot-03.jpg');
 }
 
 .card__title {
@@ -164,17 +188,21 @@ body {
     font-size: 22px;
     text-transform: uppercase;
     text-decoration: underline;
+    text-underline-offset: 3px;
+    margin: 0;
 }
 
 .card__text {
     position: relative;
     z-index: 2;
     font-size: 20px;
+    margin: 0;
 }
 
 .lots__look-more-link {
     font-size: 20px;
     margin-left: 40px;
+    text-underline-offset: 4px;
 }
 
 /* Об аукционе */
@@ -183,6 +211,11 @@ body {
     grid-template-columns: 430px 1fr;
     gap: 25px;
     padding: 0 50px 180px;
+}
+
+.about__column {
+    display: flex;
+    flex-direction: column;
 }
 
 .about__logo {
@@ -203,7 +236,7 @@ body {
 .about__title {
     font-size: 40px;
     text-transform: uppercase;
-    margin: 100px 0;
+    margin: 100px 0 100px;
 }
 
 .about__text {
@@ -211,8 +244,12 @@ body {
     line-height: 1.2;
 }
 
-.about__text p:first-child {
-    margin-bottom: 25px;
+.about__text p {
+    margin: 0 0 25px 0;
+}
+
+.about__text p:last-child {
+    margin-bottom: 0;
 }
 
 /* Подвал */
@@ -222,9 +259,31 @@ body {
     padding: 180px 50px 90px;
 }
 
+.footer .address {
+    font-style: normal;
+    line-height: 1.35;
+    font-size: 18px;
+}
+
+.footer .address a {
+    text-underline-offset: 4px;
+}
+
+.footer__menu {
+    display: flex;
+    justify-content: center;
+}
+
 .footer__menu-list {
     text-align: center;
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__menu-link {
+    font-size: 18px;
+    text-underline-offset: 4px;
 }
 
 .footer__menu-link_active {
@@ -235,6 +294,8 @@ body {
     display: flex;
     gap: 48px;
     list-style: none;
+    margin: 0;
+    padding: 0;
     justify-content: end;
 }
 
